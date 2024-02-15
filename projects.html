@@ -5,24 +5,39 @@
         <title>Projects | Ruqayyah Muse - Software Developer</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="https://github.com/rukky022/personal-website/blob/dc754de8ed69351241f3a570caf84cd1eab8a670/images/rm_logo_circle.png">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <script src="javascript.js"></script>
+        <script src="https://kit.fontawesome.com/7ff67813f8.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class="topbar"></div>
+        <div class="top_menu">
+            <div class="topbar"></div>
         
-        <div class="headerbar">
-            <div class="logo">
-                <a href="index.html"><img src="images/rm_logo.png" alt="Ruqayyah Muse Icon"></a>
-            </div>
-            <div class="navigation">
-                <ul>
+            <div class="headerbar">
+                <div class="tophalf">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/rm_logo.png" alt="Ruqayyah Muse Icon"></a>
+                    </div>
+                    <div class="navigation">
+                        <ul>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="projects.html">projects</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown_nav no_show" id="dropdown">
+                        <i class="fa-solid fa-bars" id="hamburger_menu"></i>
+                    </div>
+                </div>
+                <ul class="content no_show" id="dropdown_content">
                     <li><a href="about.html">about</a></li>
                     <li><a href="projects.html">projects</a></li>
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
         </div>
+        
 
         <div class="page_content">
 

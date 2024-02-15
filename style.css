@@ -1,42 +1,44 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @font-face {
     font-family: the_seasons;
-    src: url(../fonts/the_seasons/Fontspring-DEMO-theseasons-reg.otf);
+    src: url(fonts/the_seasons/Fontspring-DEMO-theseasons-reg.otf)
 }
-
 @font-face {
     font-family: the_seasons;
-    src: url(../fonts/the_seasons/Fontspring-DEMO-theseasons-lt.otf);
+    src: url(fonts/the_seasons/Fontspring-DEMO-theseasons-lt.otf);
     font-weight: lighter;
 }
+
+/* modifying existing elements */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans';
-  font-size: 1.2vw;
+  font-size: 2.2vh;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
 }
 
-.page_content {
-    margin: 8vh 15vw;
-    margin-bottom: 10vh;
+i {
+    color: #794844;
+    font-size: 3.2vh;
+}
+
+i:hover {
+    cursor: pointer;
 }
 
 h1, h2, h3 {
     font-family: 'the_seasons';
+    color: #542B28
 }
 
 h1 {
-    color: #542B28;
-    font-size: 3.3vw;
-}
-
-h2 {
-    color: #542B28;
+    font-size: 4.5vh;
 }
 
 h3, h4 {
@@ -50,6 +52,7 @@ p, li {
 a {
     text-decoration: none;
     color: #794844;
+    width: fit-content;
 }
 
 a:hover {
@@ -63,6 +66,12 @@ a:hover {
     font-weight: bold;
 }
 
+/* every page classes */
+.top_menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .topbar {
     height: 1.7vh;
     width: 100%;
@@ -71,11 +80,16 @@ a:hover {
 
 .headerbar {
     display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #794844;
+}
+
+.headerbar .tophalf {
+    display: flex;
     flex-direction: row;
     height: 10vh;
     justify-content: space-between;
     padding: 1vh 10%;
-    border-bottom: 2px solid #794844;
     align-items: center;
 }
 
@@ -86,13 +100,38 @@ a:hover {
 .navigation ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+}
+
+.navigation ul li, .content li {
+    padding: 1vh 2vw;
+    font-size: 2.5vh;
+}
+
+.dropdown_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
     margin: 0;
 }
 
-.navigation ul li {
-    padding: 1vh 2vw;
-    font-size: 1.8vw;
+.content li {
+    border-top: 1px solid #794844cc;
+    display: flex;
+    justify-content: center;
+}
+
+.page_content {
+    margin: 8vh 15vw;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer{
@@ -100,18 +139,19 @@ a:hover {
     bottom: 0;
     padding: 1.3vh 10%;
     color: white;
-    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 2vh;
+    align-items: center;
+    font-size: 1.8vh;
+    line-height: 1.4;
 }
 
 .footer .socialmedia {
     display: flex;
     flex-direction: row;
-    min-width: fit-content;
-    justify-content: space-between;
+    height: 2vh;
+    align-items: center;
 }
 
 .footer .socialmedia img {
@@ -124,10 +164,8 @@ a:hover {
     border: 4px solid #EECFCD;
     border-radius: 12px;
     box-shadow: 10px 10px #EECFCD;
-    padding: 0vh 0vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -138,14 +176,23 @@ a:hover {
     padding: 5vh 2vw;
 }
 
+.full_size .left {
+    width: 100%;
+    padding: 5vh 5vw;
+}
+
+.full_size .right {
+    display: none;
+}
+
 .text_img .left #welcome_msg {
     color: #794844;
-    font-size: 3vw;
+    font-size: 4.5vh;
     margin: 0;
 }
 
 .text_img .left h1 {
-    font-size: 5vw;
+    font-size: 7vh;
     margin: 0;
 }
 
@@ -175,6 +222,12 @@ a > .button, .skills > .button {
     color: white;
     width: fit-content;
     margin-right: 2vw;
+}
+
+a > .full_btn {
+    width: auto;
+    margin: 1vh 0vw;
+    text-align: center;
 }
 
 a:nth-child(2n) >.button, .skills > .button:nth-child(2n) {
@@ -233,6 +286,7 @@ a:last-child > .button, .skills > .button:last-child {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .section_header h2 {
@@ -273,7 +327,7 @@ a:last-child > .button, .skills > .button:last-child {
 }
 
 .skills .button {
-    font-size: 1.15vw;
+    font-size: 2vh;
     margin: 1vh 0.5vw;
 }
 
@@ -377,6 +431,14 @@ a:last-child > .button, .skills > .button:last-child {
     margin-left: 2.5vw;
 }
 
+.full_size .img {
+    display: none;
+}
+
+.full_size .text {
+    height: 100%;
+}
+
 .vertical_card {
     /* width: 25%; */
     padding: 5vh 2vw;
@@ -460,4 +522,8 @@ a:last-child > .button, .skills > .button:last-child {
 .connect a:hover {
     background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #EECFCD 50%);
     transition: 2s ease-in;
+}
+
+.no_show {
+    display: none;
 }
